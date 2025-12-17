@@ -11,11 +11,14 @@
       <a-camera gps-camera rotation-reader></a-camera>
 
       <!-- Stop 1 -->
-      <a-text
-        value="Welcome to LHS!"
-        scale="12 12 12"
-        color="yellow"
-        gps-entity-place="latitude:00.00000; longitude: 00.00000;"
+      	<!-- Load the Blender file -->
+		<a-assets>
+			<a-asset-item id="AR" src="extrusion.glb"></a-asset-item>
+		</a-assets>
+		
+		<!-- Display as AR element -->
+		<a-entity gltf-model="#AR" gps-entity-place="latitude: 39.27913807020708; longitude: -84.2744832154122;"></a-entity>
+
       ></a-text>
     </a-scene>
   </body>
